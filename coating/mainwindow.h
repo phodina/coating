@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    char *msg = nullptr;
 };
 
 #endif // MAINWINDOW_H

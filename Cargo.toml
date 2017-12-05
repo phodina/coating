@@ -3,4 +3,11 @@ name = "coating"
 version = "0.1.0"
 authors = ["Petr Hodina <hodinapetr46@gmail.com>"]
 
+[lib]
+crate-type = ["staticlib"]
+
+[build-dependencies]
+moz-cheddar = "0.4.0"
+
 [dependencies]
+libc = "*"

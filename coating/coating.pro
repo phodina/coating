@@ -23,6 +23,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
+INCLUDEPATH +=  ../include
+
+LIBS += ../target/debug/libcoating.a -ldl -lpthread
+
+QMAKE_CXXFLAGS += -g3 -fsanitize=address -fno-omit-frame-pointer
+QMAKE_CFLAGS += -g3 -fsanitize=address -fno-omit-frame-pointer
+QMAKE_LFLAGS += -g3 -fsanitize=address
+
 SOURCES += \
         main.cpp \
         mainwindow.cpp
